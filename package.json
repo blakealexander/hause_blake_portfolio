@@ -1,23 +1,37 @@
 {
-  "name": "hause_blake_portfolio",
+  "name": "hause_blake-iid-svg",
   "version": "1.0.0",
-  "description": "website portfolio",
+  "description": "interactive vector graphic info poster",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/blakealexander/hause_blake_portfolio.git"
+    "url": "git+https://github.com/blakealexander/hause_blake-IID-SVG.git"
   },
   "author": "Blake Hause",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/blakealexander/hause_blake_portfolio/issues"
+    "url": "https://github.com/blakealexander/hause_blake-IID-SVG/issues"
   },
-  "homepage": "https://github.com/blakealexander/hause_blake_portfolio#readme",
+  "homepage": "https://github.com/blakealexander/hause_blake-IID-SVG#readme",
   "devDependencies": {
     "browser-sync": "^2.26.3",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.9.4"
+  },
+  "dependencies": {
+    "animate.css": "^3.7.0",
+    "autoprefixer": "^9.3.1",
+    "cssnano": "^4.1.7",
+    "gulp-concat": "^2.6.1",
+    "gulp-header": "^2.0.5",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "run-sequence": "^2.2.1",
+    "wowjs": "^1.1.3"
   }
 }
