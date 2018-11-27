@@ -3,3 +3,14 @@ Portfolio site developed to present my work and my skill set (both technological
 
 ## 
 created folder structure, added gulp files, git ignore and sass.
+
+### 
+built landing page, added title, background image, parallax scroll, buttons.
+
+####
+built about me section as well as my skills sextion, added icons and text.
+
+#####
+building portfolio section.
+
+######

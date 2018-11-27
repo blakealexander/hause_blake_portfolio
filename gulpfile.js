@@ -29,5 +29,14 @@ gulp.task('wowJs', function () {
     .pipe(gulp.dest('./js'));
 });
 
+gulp.task('frameworkJs', function () {
+  return gulp.src('node_modules/foundation-sites/dist/js/**.*')
+    .pipe(gulp.dest('./js/foundation/'));
+});
 
-gulp.task('default',['wowJs', 'sass', 'animateCss']);
+gulp.task('framework', function () {
+  return gulp.src('node_modules/foundation-sites/dist/css/foundation.min.css')
+    .pipe(gulp.dest('./css'));
+});
+
+gulp.task('default',['wowJs', 'sass', 'framework', 'frameworkJs', 'animateCss']);

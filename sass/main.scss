@@ -1,1 +1,372 @@
 @import '_vars';
+
+// ------------------------------------------------------Hamburger Menu
+
+// ---------------------------------------End of Hamburger Menu
+
+.hero-container{
+    min-height: 700px;
+    background: url("/images/cityscape.jpg");
+    background-attachment: fixed;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 600px) {
+    .hero-container{
+     background: url("/images/BlakeHauseSketchSmall.jpg");
+     min-height: 700px;
+     background-attachment: fixed;
+     background-position: top left;
+     background-repeat: no-repeat;
+     background-size: cover;
+    }
+  }
+
+
+
+
+.logo {
+    position: fixed;
+    height: 350px;
+
+}
+
+@media only screen and (max-width: 600px) {
+    img.logo.vert{
+       display: none;
+    }
+
+    img.logo.horz{
+       display: block;
+       position: relative;
+       top: 10px;
+       height: auto;
+       max-width: 90%;
+       margin: 0 auto;
+       }
+  }
+
+  @media only screen and (min-width: 601px) {
+    img.logo.vert{
+       display: block;
+       left: 15px;
+       top: 20px;
+    }
+
+    img.logo.horz{
+       display: none;
+
+       }
+  }
+
+
+  #ScrollDown {
+      width: 300px;
+      position: relative;
+      top: 600px;
+      left: 600px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    #ScrollDown{
+        width: 300px;
+        position: relative;
+        top: 500px;
+        left: 60px;
+    }
+}
+
+
+//   .animate{
+//     stroke-dasharray: 1000;
+//     stroke-dashoffset: 1000;
+//     animation: dash 10s linear forwards;
+//    }
+
+   @keyframes dash {
+   100% {
+    stroke-dashoffset: 0;
+    }
+   }
+#s_path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 3s linear forwards;
+}
+
+#cr_path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 3s linear forwards 1s;
+    // animation-delay: 10s;
+}
+#ol_path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 3s linear forwards 2.2s;
+}
+
+#l_path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 3s linear forwards 3.7s;
+}
+
+#D_path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 3s linear forwards 4.5s;
+}
+
+#ow_path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 3s linear forwards 5.5s;
+}
+
+#n_path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 3s linear forwards 7.2s;
+}
+
+.videoreelButton {
+    position: fixed;
+    background: url("/images/videoreelBtn.svg");
+}
+.videoreelButton:hover {
+    background: url("/images/videoreelBtnW.svg");
+    transition-duration: 2s;
+    transition-delay: 0.2s;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(-360deg);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .videoreelButton {
+        position: relative;
+       height: 75px;
+       width: 75px;
+       top: 70px;
+       left: 40%;
+       animation-name: spin;
+       animation-duration: 5000ms;
+       animation-iteration-count: infinite;
+       animation-timing-function: linear;
+
+    }
+    .videoreelButton:hover {
+        background: url("/images/videoreelBtnW.svg");
+        transition-duration: 2s;
+        transition-delay: 0.2s;
+    }
+  
+}
+
+
+@media only screen and (min-width: 601px) {
+    .videoreelButton {
+        top: 200px;
+        right: 15px;
+        height: 100px;
+        width: 100px;
+        animation-name: spin;
+        animation-duration: 5000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+       
+    }
+}
+
+
+//--------------------------------------------------------- About 
+.about-container{
+    padding: 100px 15px;
+    background-color: #252525;
+    color: white;
+}
+
+// .about-content{
+//     margin-left: 100px;
+//     margin-right: 100px;
+// }
+
+@media only screen and (min-width: 601px) {
+  .about-content{
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+    .about-content{
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+//------------------------------------------------------------- Skills
+.skills-container{
+    padding: 100px 15px;
+    text-align: center;
+}
+
+.skill-blocks-container {
+    @media only screen and (min-width: 601px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.skill-block {
+    @media only screen and (min-width: 601px) {
+        flex: 1;
+    }
+    img {
+        height: 100px;
+        display: block;
+        margin: 10px auto;
+        
+    }
+}
+
+//-------------------------------------------------------------- Porfolio
+.portfolio-container {
+    padding: 100px 15px;
+    text-align: center;
+    background-color: #252525;
+}
+
+.work-blocks-container {
+    @media only screen and (min-width: 601px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.work1 {
+    @media only screen and (min-width: 601px) {
+        flex: 1;
+    }
+    img {
+        height: 300px;
+        width: 400px;
+        display: inline-block;
+   
+        background-color: blue;
+        
+    }
+}
+
+.work2 {
+    @media only screen and (min-width: 601px) {
+        flex: 1;
+    }
+    img {
+        height: 400px;
+        display: inline-block;
+        margin: 10px auto;
+        background-color: white;
+        
+    }
+}
+
+.work3 {
+    @media only screen and (min-width: 601px) {
+        flex: 1;
+    }
+    img {
+        height: 300px;
+        display: inline-block;
+        margin: 10px auto;
+        background-color: blue;
+        
+    }
+}
+
+
+.work4 {
+    @media only screen and (min-width: 601px) {
+        flex: 1;
+    }
+    img {
+        height: 300px;
+        display: inline-block;
+        margin: 10px auto;
+        background-color: white;
+        
+    }
+}
+
+.work5 {
+    @media only screen and (min-width: 601px) {
+        flex: 1;
+    }
+    img {
+        height: 300px;
+        display: inline-block;
+        margin: 10px auto;
+        background-color: blue;
+        
+    }
+}
+
+
+.work6 {
+    @media only screen and (min-width: 601px) {
+        flex: 1;
+    }
+    img {
+        height: 300px;
+        display: inline-block;
+        margin: 10px auto;
+        background-color: white;
+        
+    }
+}
+
+.work7 {
+    @media only screen and (min-width: 601px) {
+        flex: 1;
+    }
+    img {
+        height: 300px;
+        display: inline-block;
+        margin: 10px auto;
+        background-color: blue;
+        
+    }
+}
+
+
+.work8 {
+    @media only screen and (min-width: 601px) {
+        flex: 1;
+    }
+    img {
+        height: 300px;
+        display: inline-block;
+        margin: 10px auto;
+        background-color: white;
+        
+    }
+}
+
+.hide-br-mobile {
+    @media only screen and (min-width: 601px) {
+        display: block;
+    }
+    @media only screen and (max-width: 600px) {
+        display: none;
+    }
+}

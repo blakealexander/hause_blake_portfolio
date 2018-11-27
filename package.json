@@ -18,9 +18,11 @@
   "homepage": "https://github.com/blakealexander/hause_blake-IID-SVG#readme",
   "devDependencies": {
     "browser-sync": "^2.26.3",
+    "foundation-sites": "^6.5.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.10.0",
     "gulp-sass": "^4.0.2",
+    "jquery": "^3.3.1",
     "node-sass": "^4.9.4"
   },
   "dependencies": {

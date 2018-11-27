@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="pen" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 372.648 375.648" style="enable-background:new 0 0 372.648 375.648;" xml:space="preserve">
+<style type="text/css">
+	.Drop_x0020_Shadow{fill:none;}
+	.Outer_x0020_Glow_x0020_5_x0020_pt{fill:none;}
+	.Blue_x0020_Neon{fill:none;stroke:#8AACDA;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;}
+	.Chrome_x0020_Highlight{fill:url(#SVGID_1_);stroke:#FFFFFF;stroke-width:0.3629;stroke-miterlimit:1;}
+	.Jive_GS{fill:#FFDD00;}
+	.Alyssa_GS{fill:#A6D0E4;}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-770" y1="-332.3518" x2="-770" y2="-333.3518">
+	<stop  offset="0" style="stop-color:#656565"/>
+	<stop  offset="0.618" style="stop-color:#1B1B1B"/>
+	<stop  offset="0.6292" style="stop-color:#545454"/>
+	<stop  offset="0.9831" style="stop-color:#3E3E3E"/>
+</linearGradient>
+<path id="pen_head" d="M208,73.648l-119,34c-11.889,3.602-17.607,11.755-21,22l-68,205l11.517,12.426l108.914-108.913
+	c-2.197-4.539-3.431-9.632-3.431-15.013c0-19.054,15.446-34.5,34.5-34.5s34.5,15.446,34.5,34.5s-15.446,34.5-34.5,34.5
+	c-5.646,0-10.97-1.365-15.674-3.769L26.483,363.222L38,375.648l205-71c14.114-7.701,23.568-19.917,28-37l28-102L208,73.648z"/>
+<path id="pen_top" d="M362.5,51.148l-41-41C308.813-2.539,288.735-3.33,275.126,7.774L275,7.648l-2.499,2.499
+	c0,0-0.001,0.001-0.001,0.001v0l-46.5,46.5l90,90l49-49l-0.126-0.126C375.978,83.913,375.187,63.835,362.5,51.148z"/>
+</svg>
