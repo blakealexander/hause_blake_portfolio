@@ -1,21 +1,21 @@
 {
-  "name": "hause_blake-iid-svg",
+  "name": "hause_blake_portfolio",
   "version": "1.0.0",
-  "description": "interactive vector graphic info poster",
+  "description": " Portfolio site developed to present my work and my skill set (both technologically and graphically) to potential clients and employers.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/blakealexander/hause_blake-IID-SVG.git"
+    "url": "git+https://github.com/blakealexander/hause_blake_portfolio.git"
   },
   "author": "Blake Hause",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/blakealexander/hause_blake-IID-SVG/issues"
+    "url": "https://github.com/blakealexander/hause_blake_portfolio/issues"
   },
-  "homepage": "https://github.com/blakealexander/hause_blake-IID-SVG#readme",
+  "homepage": "https://github.com/blakealexander/hause_blake_portfolio#readme",
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "foundation-sites": "^6.5.0",

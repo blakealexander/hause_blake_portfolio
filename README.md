@@ -14,3 +14,7 @@ built about me section as well as my skills sextion, added icons and text.
 building portfolio section.
 
 ######
+made website live using hostpapa.
+
+#######
+added email section and connected it to my email using php.

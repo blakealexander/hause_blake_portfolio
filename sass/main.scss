@@ -1,6 +1,268 @@
 @import '_vars';
 
+// ----------------------------------------Global 
+.hide-br-mobile {
+    @media only screen and (min-width: 601px) {
+        display: block;
+    }
+    @media only screen and (max-width: 600px) {
+        display: none;
+    }
+}
+
+hr {
+margin-bottom: 3.125rem;
+border-color: rgba(255, 255, 255, 0.2);
+width: 12.5rem;
+color: #7e7e7e;
+
+}
+
+hr.light{
+    margin-bottom: 3.125rem;
+    border-color:#999;
+    width: 12.5rem;
+    color: #000;
+    
+    }
+
+@mixin transition($in) {
+	transition:$in;
+	-webkit-transition:$in;
+	-moz-transition:$in;
+	-o-transition:$in;
+	-ms-transition:$in;
+}
+@mixin transform($in) {
+	transform:$in;
+	-webkit-transform:$in;
+	-moz-transform:$in;
+	-o-transform:$in;
+	-ms-transform:$in;
+}
+@mixin animation($in) {
+	animation:$in;
+	-webkit-animation:$in;
+	-moz-animation:$in;
+	-o-animation:$in;
+	-ms-animation:$in;
+}
+
+// .wow { visibility: hidden; }
+
 // ------------------------------------------------------Hamburger Menu
+// body {
+// 	background-color: red;
+// }
+
+//------------------------------------------------------- Overlay menu 
+.bg-cover {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	z-index: 0;
+	transition: all 350ms ease;
+	opacity: 0;
+	visibility: hidden;
+    pointer-events: none;
+    z-index: 9;
+    max-width: 100%;
+}
+
+.prompt {
+	position: fixed;
+	width: 100%;
+	text-align: center;
+	line-height: 114px;
+	font-family: Georgia, sans-serif;
+	color: #666;
+}
+
+.reveal {
+	opacity: .95;
+	display: block;
+	pointer-events: auto;
+	visibility: visible;
+}
+
+.hamburger-shell {
+	// margin: 0;
+	// position: fixed;
+	// overflow: hidden;
+	// width: 70px;
+	// height: 100px;
+	// overflow: auto;
+	// left: calc(100% - 100px);
+    // top: 20px;
+    // left: 50%;
+    // z-index: 9;
+
+    position: fixed;
+    padding: 5px;
+    top: 20px;
+    left: 15px;
+    z-index: 9;
+    background-color: rgba(253, 252, 252, 0.815);
+    padding: 8px;
+    text-align: center;
+}
+
+.top, .middle{
+	// position: absolute;
+	// width: 62px;
+	// height: 10px;
+	// background-color: black;
+	// transition: all 350ms ease-in-out;
+    // top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 350ms ease-in-out;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+}
+
+.middle {
+	margin-top: 5px;
+}
+
+#menu {
+	position: fixed;
+	// left: calc(100% - 292px);
+    top: 10px;
+	color: black;
+	display: none;
+	margin: 120px 30px;
+	text-decoration: none;
+	font-family: Arial, sans-serif;
+	font-weight: 100;
+	font-size: 20px;
+	text-transform: uppercase;
+	color: #333;
+	padding: 24px;
+	width: 200px;
+    text-align: left;
+    z-index: 9;
+}
+
+#menu a li {
+	text-decoration: none!important;
+	padding-bottom: 10px;
+	margin-bottom: 12px;
+	border-bottom: 1px solid black;
+	list-style: none;
+	color: #555;
+	transition: all 150ms ease;
+}
+
+#menu a li:hover {
+	color: red;
+	padding-right: 3px;
+}
+
+// #menu a li:hover:after {
+// }
+
+
+
+#menu a {
+	text-decoration: none;
+}
+
+.rotate {
+	transform: rotate(225deg);
+	-webkit-transform: rotate(225deg);
+	top: 30px;
+	background-color: red;
+	height: 2px;
+}
+
+.rotate-back {
+	transform: rotate(-225deg);
+	-webkit-transform: rotate(-225deg);
+	top: 30px;
+	background-color: red;
+    height: 2px;
+    &.middle {
+        margin-top: 0;
+        position: relative;
+        top: -2px;
+    }
+}
+
+.top {
+animation-delay: 100ms;
+}
+
+.middle {
+animation-delay: 250ms;
+}
+
+.bottom {
+	animation-delay: 400ms;
+}
+
+.menu-name {
+	font-family: pirulen;
+	font-weight: 600;
+	color: black;
+	text-decoration: none;
+	// position: absolute;
+	// top: 56px;
+	// left: -1px;
+    transition: all 350ms;
+    margin-top: 10px;
+    line-height: 1;
+}
+
+.bump {
+	color: red;
+}
+
+.responsive-box {
+	background-color: #ddd;
+	margin: 2%;
+	float: left;
+}
+
+// .box-1 {
+// 	width: 96%;
+// 	height: 300px;
+// }
+
+// .box-2, .box-3, .box-4 {
+// 	width: 29.333%;
+// 	height: 140px;
+// }
+
+// .box-5 {
+// 	width: 62.666%;
+// 	height: 492px;
+// }
+
+// .header {
+// 	width: 100%;
+// 	height: 120px;
+// }
+
+// .par-1, .par-2, .par-3 {
+// 	width: 70%;
+// 	margin: 1% 2%;
+// 	background-color: #888;
+// 	height: 16px;
+// 	float: left;
+// }
+
+// .par-2 {
+// 	width: 56%;
+// }
+
+// .par-3 {
+// 	width: 64%;
+// }
 
 // ---------------------------------------End of Hamburger Menu
 
@@ -24,14 +286,35 @@
     }
   }
 
-
+  .row {
+    // min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
 
 
 .logo {
     position: fixed;
-    height: 350px;
+    // transform: rotate(90deg);
+    // transform-origin: left top 0;
+   }
 
-}
+   .startLogo {
+       position: fixed;
+   }
+
+   .altLogo {
+       position: absolute;
+   }
+
+   .white {
+    color: white;
+  }
+  
+  .black {
+    color: #1d1d1d;
+  }
 
 @media only screen and (max-width: 600px) {
     img.logo.vert{
@@ -41,18 +324,21 @@
     img.logo.horz{
        display: block;
        position: relative;
-       top: 10px;
+       top: 30px;
        height: auto;
+       width: 200px;
        max-width: 90%;
        margin: 0 auto;
+       margin-right: 15px;
        }
   }
 
   @media only screen and (min-width: 601px) {
     img.logo.vert{
        display: block;
-       left: 15px;
-       top: 20px;
+       left: 47px;
+       top: 90px;
+       height: 230px;
     }
 
     img.logo.horz{
@@ -62,79 +348,82 @@
   }
 
 
-  #ScrollDown {
-      width: 300px;
-      position: relative;
-      top: 600px;
-      left: 600px;
-  }
+//   #ScrollDown {
+//       width: 300px;
+//       position: relative;
+//       top: 600px;
+//       left: 600px;
+//   }
 
-  @media only screen and (max-width: 600px) {
-    #ScrollDown{
-        width: 300px;
-        position: relative;
-        top: 500px;
-        left: 60px;
-    }
-}
+//   @media only screen and (max-width: 600px) {
+//     #ScrollDown{
+//         width: 200px;
+//         position: relative;
+//         top: 500px;
+//         left: 90px;
+//     }
+// }
 
 
-//   .animate{
+// //   .animate{
+// //     stroke-dasharray: 1000;
+// //     stroke-dashoffset: 1000;
+// //     animation: dash 10s linear forwards;
+// //    }
+
+//    @keyframes dash {
+//    100% {
+//     stroke-dashoffset: 0;
+//     }
+//    }
+// #s_path {
 //     stroke-dasharray: 1000;
 //     stroke-dashoffset: 1000;
-//     animation: dash 10s linear forwards;
-//    }
+//     animation: dash 3s linear forwards;
+// }
 
-   @keyframes dash {
-   100% {
-    stroke-dashoffset: 0;
-    }
-   }
-#s_path {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: dash 3s linear forwards;
-}
+// #cr_path {
+//     stroke-dasharray: 1000;
+//     stroke-dashoffset: 1000;
+//     animation: dash 3s linear forwards 1s;
+//     // animation-delay: 10s;
+// }
+// #ol_path {
+//     stroke-dasharray: 1000;
+//     stroke-dashoffset: 1000;
+//     animation: dash 3s linear forwards 2.2s;
+// }
 
-#cr_path {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: dash 3s linear forwards 1s;
-    // animation-delay: 10s;
-}
-#ol_path {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: dash 3s linear forwards 2.2s;
-}
+// #l_path {
+//     stroke-dasharray: 1000;
+//     stroke-dashoffset: 1000;
+//     animation: dash 3s linear forwards 3.7s;
+// }
 
-#l_path {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: dash 3s linear forwards 3.7s;
-}
+// #D_path {
+//     stroke-dasharray: 1000;
+//     stroke-dashoffset: 1000;
+//     animation: dash 3s linear forwards 4.5s;
+// }
 
-#D_path {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: dash 3s linear forwards 4.5s;
-}
+// #ow_path {
+//     stroke-dasharray: 1000;
+//     stroke-dashoffset: 1000;
+//     animation: dash 3s linear forwards 5.5s;
+// }
 
-#ow_path {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: dash 3s linear forwards 5.5s;
-}
-
-#n_path {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: dash 3s linear forwards 7.2s;
-}
+// #n_path {
+//     stroke-dasharray: 1000;
+//     stroke-dashoffset: 1000;
+//     animation: dash 3s linear forwards 7.2s;
+// }
 
 .videoreelButton {
     position: fixed;
     background: url("/images/videoreelBtn.svg");
+    &:focus{
+        outline: none;
+    }
 }
 .videoreelButton:hover {
     background: url("/images/videoreelBtnW.svg");
@@ -156,12 +445,13 @@
         position: relative;
        height: 75px;
        width: 75px;
-       top: 70px;
+       top: 90px;
        left: 40%;
        animation-name: spin;
        animation-duration: 5000ms;
        animation-iteration-count: infinite;
        animation-timing-function: linear;
+       z-index: 9;
 
     }
     .videoreelButton:hover {
@@ -175,7 +465,7 @@
 
 @media only screen and (min-width: 601px) {
     .videoreelButton {
-        top: 200px;
+        top: 20px;
         right: 15px;
         height: 100px;
         width: 100px;
@@ -183,6 +473,7 @@
         animation-duration: 5000ms;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
+        z-index: 9;
        
     }
 }
@@ -244,129 +535,121 @@
     padding: 100px 15px;
     text-align: center;
     background-color: #252525;
+    color: #fff;
+ 
 }
 
 .work-blocks-container {
+    column-count: 1;
+    max-width: 75%;
+    margin: 0 auto;
     @media only screen and (min-width: 601px) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        column-count: 2;
+    }
+    column-gap: 0;
+    img {
+        width: 100%;
     }
 }
 
-.work1 {
-    @media only screen and (min-width: 601px) {
-        flex: 1;
-    }
-    img {
-        height: 300px;
-        width: 400px;
-        display: inline-block;
+
+
+
+//-------------------------------------------------- Contact
+
+.contact-container{
+    padding: 100px 15px;
+    text-align: center;
+}
+
+input{
+    position: relative;
+    left: 25%;
+    max-width: 50%;
+    display: inline-block;
+    margin: 0 auto;
    
-        background-color: blue;
-        
-    }
-}
-
-.work2 {
-    @media only screen and (min-width: 601px) {
-        flex: 1;
-    }
-    img {
-        height: 400px;
-        display: inline-block;
-        margin: 10px auto;
-        background-color: white;
-        
-    }
-}
-
-.work3 {
-    @media only screen and (min-width: 601px) {
-        flex: 1;
-    }
-    img {
-        height: 300px;
-        display: inline-block;
-        margin: 10px auto;
-        background-color: blue;
-        
-    }
-}
-
-
-.work4 {
-    @media only screen and (min-width: 601px) {
-        flex: 1;
-    }
-    img {
-        height: 300px;
-        display: inline-block;
-        margin: 10px auto;
-        background-color: white;
-        
-    }
-}
-
-.work5 {
-    @media only screen and (min-width: 601px) {
-        flex: 1;
-    }
-    img {
-        height: 300px;
-        display: inline-block;
-        margin: 10px auto;
-        background-color: blue;
-        
-    }
-}
-
-
-.work6 {
-    @media only screen and (min-width: 601px) {
-        flex: 1;
-    }
-    img {
-        height: 300px;
-        display: inline-block;
-        margin: 10px auto;
-        background-color: white;
-        
-    }
-}
-
-.work7 {
-    @media only screen and (min-width: 601px) {
-        flex: 1;
-    }
-    img {
-        height: 300px;
-        display: inline-block;
-        margin: 10px auto;
-        background-color: blue;
-        
-    }
-}
-
-
-.work8 {
-    @media only screen and (min-width: 601px) {
-        flex: 1;
-    }
-    img {
-        height: 300px;
-        display: inline-block;
-        margin: 10px auto;
-        background-color: white;
-        
-    }
-}
-
-.hide-br-mobile {
-    @media only screen and (min-width: 601px) {
-        display: block;
-    }
     @media only screen and (max-width: 600px) {
-        display: none;
+    max-width: 75%;
+    left: 12.5%;
+    margin: 0 auto;
+  }
+}
+
+label{
+    position: relative;
+    left: 25%;
+    text-align: left;
+
+    @media only screen and (max-width: 600px) {
+        left: 12.5%;
+  }
+}
+
+textarea{
+  position: relative;
+  max-width: 50%;
+  display: block;
+  margin: 0 auto;
+
+  @media only screen and (max-width: 600px) {
+    max-width: 75%;
+    margin: 0 auto;
+  }
+}
+
+
+
+    .contact-btn {
+        outline:none;
+        border:none;
+        padding:10px;
+        display:block;
+        margin:50px auto;
+        cursor:pointer;
+        font-size:20px;
+        background-color:rgb(245, 245, 245);
+        border-radius: 5px;
+        position:relative;
+        border:2px solid #000;
+    
+        @include transition(all 0.5s ease);
     }
+    
+
+
+.sub-btn {
+	color:#000;
+	border-color:transparent;
+
+	&:before {
+		width:0;
+		height:3px;
+		content:" ";
+		background-color: red;
+		position:absolute;
+		top:0;
+		left:50%;
+
+		@include transition(all 0.3s ease);
+	}
+
+	&:after {
+		@extend .sub-btn:before;
+		top:100%;
+	}
+
+	&:hover {
+		letter-spacing:8px;
+		color: red;
+
+		&:before {
+			width:100%;
+			left:0;
+		}
+		&:after {
+			width:100%;
+			left:0;
+		}
+	}
 }
