@@ -1,4 +1,5 @@
-// new WOW().init();
+new WOW().init();
+
 
 $(document).ready(function () {
     $(document).foundation();
@@ -17,8 +18,46 @@ function logoSwitch () {
   
   $(document).scroll(function() {logoSwitch();});
   
-  logoSwitch();
+	logoSwitch();
+	
+	//fetching data with ajax and vue.js
+	const work = new Vue({
+		el : "#portfolio",
+		data : {
+				portfolioWorks: "",
+				// lightBox : [],
+		},
 
+		mounted : function() {
+				this.fetchData();
+		},
+
+		methods : {
+				fetchData() {
+						// debugger;
+								
+						fetch(`./admin/scripts/data.php`) //fetching data
+						// .then(res => res.text())
+						// .then(textResults => {
+						// 	console.log(textResults);
+						// })
+						.then(res => res.json()) // parsing the data
+						.then(data => {
+								this.portfolioWorks = data;
+						})
+				},
+
+				// lightBoxProject(project) {
+				// 		this.lightBox = project;
+				// 		//triggers lightbox opening
+				// 		openLBox();
+				// }
+		}
+});
+
+
+
+// ----------------------------------------------MENU OVERLAY
 $(document).ready(function(){
 	$('.hamburger-shell').click(function(){
 		$('#menu').slideToggle(300);

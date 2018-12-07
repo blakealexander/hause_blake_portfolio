@@ -7,53 +7,59 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/foundation.min.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
   <title>BlakeHauseDesign</title>
 </head>
 
 <body>
-  <header class="hero-container">
+  <header class="hero-container" id="header">
     <nav class="nav">
       <div class="bg-cover" class="none"></div>
-
       <div class="prompt"></div>
-      
       <a class="hamburger-shell">
         <div class="hamb top"></div>
-          <div class="hamb middle"></div>
+        <div class="hamb middle"></div>
         <div class="menu-name">MENU</div>
-      
-      <ul id="menu">
-          <a href="#"> <li>Home</li></a>
-          <a href="#"> <li>About</li></a>
-          <a href="#"> <li>Skills</li></a>
-          <a href="#"> <li>Portfolio</li></a>
-          <a href="#"> <li>Contact</li></a>
-      </ul>
+        <ul id="menu">
+          <a href="#header">
+            <li>Home</li>
+          </a>
+          <a href="#about">
+            <li>About</li>
+          </a>
+          <a href="#">
+            <li>Skills</li>
+          </a>
+          <a href="#portfolio">
+            <li>Portfolio</li>
+          </a>
+          <a href="#contact">
+            <li>Contact</li>
+          </a>
+        </ul>
       </a>
-      
-  </nav>
+    </nav>
 
+    <!--------------------------------------------------------------------- VIDEO PLAYER -->
     <div class="reveal" id="videoLightBox" data-reveal>
-     video goes here
+      video goes here
       <button class="close-button" data-close aria-label="Close modal" type="button">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
 
     <div class="row">
-    <img class="logo vert black startLogo" src="images/blakehauseWordmark.svg">
+      <img class="logo vert black startLogo" src="images/blakehauseWordmark.svg">
     </div>
     <img class="logo horz" src="images/blakehauseWordmarkSmall.svg">
     <div class="videoreelButton" data-open="videoLightBox"></div>
-
-    <!-- <img class="videoreelButton" src="images/videoreelBtn.svg"> -->
   </header>
-  <section class="about-container row">
-    <!-- <div class="row"> -->
-      <img class="logo vert white altLogo" src="images/blakehauseWordmarkWhite.svg">
-    <!-- </div> -->
+
+  <!---------------------------------------------------------------------------- ABOUT -->
+  <section class="about-container row" id="about">
+    <img class="logo vert white altLogo" src="images/blakehauseWordmarkWhite.svg">
     <div class="about-content">
       <h2 class="about-header text-center">About Me</h2>
       <hr>
@@ -64,96 +70,129 @@
         also enjoy coding things from scratch; bringing my designs to life in the browser. </p>
     </div>
   </section>
+
+  <!------------------------------------------------------------------- SKILLS -->
   <section class="skills-container">
-    <h2>Skills</h2>
-    <h3>What I Can Do.</h3>
-    <p>I specialize in front end development and design, with my knowledge I create meaningful and engaging
+    <h2 class="wow fadeIn" data-wow-delay=".3s" data-wow-duration="1s" data-wow-iteration="1">Skills</h2>
+    <h3 class="wow fadeIn" data-wow-delay=".8s" data-wow-duration="1s" data-wow-iteration="1">What I Can Do.</h3>
+    <p class="wow fadeIn" data-wow-delay="1s" data-wow-duration="1s" data-wow-iteration="1">I specialize in front end development and design, with my knowledge I create meaningful and engaging
       experiences.</p>
-      <hr class="light">
+    <hr class="light">
     <div class="skill-blocks-container">
-      <div class="skill-block wow bounce" data-wow-delay="4s" data-wow-duration="2s" data-wow-iteration="1">
+      <div class="skill-block wow fadeInUp" data-wow-delay="1s" data-wow-duration="1s" data-wow-iteration="1">
         <img src="images/DevelopmentIcon.svg">
-        <h4>Development</h4>
-        <p>HTML5, CSS, SASS, Javascript, Git</p>
+        <h4 class="wow fadeInUp" data-wow-delay="1.5s" data-wow-duration="1s" data-wow-iteration="1">Development</h4>
+        <p class="wow fadeInUp" data-wow-delay="2s" data-wow-duration="1s" data-wow-iteration="1">HTML5, CSS, SASS,
+          Javascript, Git</p>
       </div>
-      <div class="skill-block">
+      <div class="skill-block wow fadeInUp" data-wow-delay="2s" data-wow-duration="1s" data-wow-iteration="1">
         <img src="images/DesignIcon.svg">
-        <h4>Design</h4>
-        <p>Photoshop, Illustrator, Adobe XD, InDesign, Cinema 4D</p>
+        <h4 class="wow fadeInUp" data-wow-delay="2.5s" data-wow-duration="1s" data-wow-iteration="1">Design</h4>
+        <p class="wow fadeInUp" data-wow-delay="3s" data-wow-duration="1s" data-wow-iteration="1">Photoshop,
+          Illustrator, Adobe XD, InDesign, Cinema 4D</p>
       </div>
     </div>
   </section>
-  <section class="portfolio-container row">
-      <img class="logo vert white altLogo" src="images/blakehauseWordmarkWhite.svg">
+
+  <!----------------------------------------------------------------------------------- PORTFOLIO PAGE -->
+
+  <section class="portfolio-container row" id="portfolio2">
+    <img class="logo vert white altLogo" src="images/blakehauseWordmarkWhite.svg">
     <h2>Portfolio</h2>
     <h3>Check Out Some of My Work.</h3>
     <hr>
 
-    <div class="work-blocks-container">
+    <div class="work-blocks-container" id="portfolio">
 
-      <div class="work1">
+      <div v-for="work in portfolioWorks">
+        <div class="reveal" :id="'work-'+ work['id']" data-reveal>
+          <b>{{work['img_name']}}</b> 
+          <br> 
+          {{work['img_desc']}}
+          <img :src="'images/'+ work['img_path']" :alt="work['img_name']" :data-open="'work-'+ work['id']">
+          <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+  
+        <div class="work1 wow fadeInUp slower" data-wow-delay=".3s" data-wow-duration="1s"
+        data-wow-iteration="1">
+          <div class="work1 wow fadeInUp slower" data-wow-delay=".3s" data-wow-duration="1s"
+          data-wow-iteration="1">
+            <img :src="'images/'+ work['img_path']" :alt="work['img_name']" :data-open="'work-'+ work['id']">
+          </div>
+        </div>
+      </div>
+  
+
+      <!-- <div class="work1 wow fadeInUp slower" data-wow-delay=".3s" data-wow-duration="1s"
+      data-wow-iteration="1">
         <img src="images/FuelEnergyDrinks.jpg">
       </div>
 
-      <div class="work2">
+      <div class="work2 wow fadeInUp slower" data-wow-delay=".3s" data-wow-duration="1s"
+      data-wow-iteration="1">
         <img src="images/PiscesInfuser.jpg">
       </div>
-      <div class="work3">
-          <img src="images/lucasvipers.jpg">
-        </div>
+      <div class="work3 wow fadeInUp slower" data-wow-delay=".3s" data-wow-duration="1s"
+      data-wow-iteration="1">
+        <img src="images/lucasvipers.jpg">
+      </div> -->
+<!-- 
+      <div class="work4">
+        <img src="http://placekitten.com/400/310">
+      </div> -->
 
-        <div class="work4">
-            <img src="http://placekitten.com/400/310">
-          </div>
+      <!-- <div class="work5 wow fadeInUp slower" data-wow-delay=".8s" data-wow-duration="1s"
+      data-wow-iteration="1">
+        <img src="images/thumb-agencyX.jpg">
+      </div>
 
-          <div class="work5">
-              <img src="images/bhphotography.jpg">
-            </div>
+      <div class="work6 wow fadeInUp slower" data-wow-delay=".2s" data-wow-duration="1s"
+      data-wow-iteration="1">
+        <img src="images/craigmechanical.jpg">
+      </div>
 
-            <div class="work6">
-                <img src="images/craigmechanical.jpg">
-              </div>
-
-              <div class="work7">
-                  <img src="images/agencyx.jpg">
-                </div>
-
+      <div class="work7 wow fadeInUp slower" data-wow-delay=".8s" data-wow-duration="1s"
+      data-wow-iteration="1">
+        <img src="images/thumb-FuelEnergy.jpg">
+      </div> -->
     </div>
-
   </section>
-  <section class="contact-container">
+
+  <!--------------------------------------------------------- CONTACT PAGE -->
+  <section class="contact-container" id="contact">
     <div class="contact-block">
       <h2>Contact</h2>
       <h3>Feel free to contact me. :)</h3>
       <p>I specialize in front end development and design, with my knowledge I create meaningful and engaging
         experiences.</p>
-      </div>
-      <hr class="light">
- 
-      <form action ="./admin/scripts/sendEmail.php" method="POST">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name">
-        
-            <label for="email">Email</label>
-        <input type="email" id="email" name="email">
-        
-        <label for="message">Message</label>
-        <textarea id="message" name="message"></textarea>
-        
-        <button type="submit" class="contact-btn sub-btn">Submit</button>
-        
-        </form>
+    </div>
+    <hr class="light">
+
+    <form action="./admin/scripts/sendEmail.php" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message"></textarea>
+
+      <button type="submit" class="contact-btn sub-btn">Submit</button>
+
+    </form>
   </section>
-  
+
   <script src="js/foundation/vendor/jquery.js"></script>
   <script src="js/foundation/vendor/foundation.min.js"></script>
   <script src="js/foundation/vendor/what-input.js"></script>
-  <script src="js/main.js"></script>
   <script src="js/wow.min.js"></script>
-  <script>
-    new WOW().init();
-</script>
-  
+  <script src="js/main.js"></script>
+
+
+
 
 
 </body>

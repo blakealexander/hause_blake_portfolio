@@ -1,6 +1,12 @@
 @import '_vars';
 
 // ----------------------------------------Global 
+
+body {
+    overflow-x: hidden;
+}
+
+
 .hide-br-mobile {
     @media only screen and (min-width: 601px) {
         display: block;
@@ -48,7 +54,7 @@ hr.light{
 	-ms-animation:$in;
 }
 
-// .wow { visibility: hidden; }
+.wow { visibility: hidden; }
 
 // ------------------------------------------------------Hamburger Menu
 // body {
@@ -222,11 +228,11 @@ animation-delay: 250ms;
 	color: red;
 }
 
-.responsive-box {
-	background-color: #ddd;
-	margin: 2%;
-	float: left;
-}
+// .responsive-box {
+// 	background-color: #ddd;
+// 	margin: 2%;
+// 	float: left;
+// }
 
 // .box-1 {
 // 	width: 96%;
@@ -273,6 +279,7 @@ animation-delay: 250ms;
     background-position: top left;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
 }
 
 @media only screen and (max-width: 600px) {
@@ -508,6 +515,7 @@ animation-delay: 250ms;
 .skills-container{
     padding: 100px 15px;
     text-align: center;
+    height: 100vh;
 }
 
 .skill-blocks-container {
