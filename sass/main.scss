@@ -2,7 +2,7 @@
 
 // ----------------------------------------Global 
 
-body {
+body, html {
     overflow-x: hidden;
 }
 
@@ -31,6 +31,12 @@ hr.light{
     color: #000;
     
     }
+
+hr.light.boxBorder{
+    position: relative;
+    left: 30%;
+    width: 29rem;
+}
 
 @mixin transition($in) {
 	transition:$in;
@@ -87,12 +93,64 @@ hr.light{
 	color: #666;
 }
 
-.reveal {
-	opacity: .95;
+.reveal-vid{
 	display: block;
 	pointer-events: auto;
-	visibility: visible;
+    visibility: visible;
+    background-color: red;
 }
+
+.reveal{
+    
+    display: block;
+    pointer-events: auto;
+    visibility: visible;
+    width: 100%;
+    background-color: rgb(224, 223, 223);
+    border-radius: 5px;
+    
+    img{
+        position: relative;
+        top: 50;
+        height: auto;
+        width: 50%;
+        vertical-align: center;
+        border-radius: 5px;
+    }
+    h2{
+        
+        color:#333;
+        text-align: right;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    p {
+     
+        text-align: right;
+        float: right;
+        width: 30%;
+    
+        padding-top: 10px;
+        color: #666;
+        
+        
+    }
+}
+
+// .reveal b {
+//   text-align: center;
+//   padding: 10px;
+// }
+
+//------------------------------------------LIGHTBOX
+// #videoLightBox {
+  
+//     background-color: red;
+
+
+// }
+//------------------------------------------END LIGHTBOX
 
 .hamburger-shell {
 	// margin: 0;
@@ -272,6 +330,20 @@ animation-delay: 250ms;
 
 // ---------------------------------------End of Hamburger Menu
 
+//---------------------------- VIDEO
+#videoReel{
+    display:grid;
+    width:90%;
+    margin:0 auto;
+    border-radius:4px;
+}
+
+#pPlay {
+    width: 100px;
+    height: 100px;
+}
+//------------------------------ END VIDEO
+
 .hero-container{
     min-height: 700px;
     background: url("/images/cityscape.jpg");
@@ -436,14 +508,27 @@ animation-delay: 250ms;
     background: url("/images/videoreelBtnW.svg");
     transition-duration: 2s;
     transition-delay: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    -webkit-transition-delay: 0.2s;
+    -ms-transition-duration: 0.2s;
+    -ms-transition-delay: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -moz-transition-delay: 0.2s;
 }
 
 @keyframes spin {
     from {
         transform:rotate(0deg);
+        -webkit-transform: rotate(0deg); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+        -ms-transform: rotate(0deg); /* IE 9 */
+        -moz-transform: rotate(0deg);
+        
     }
     to {
         transform:rotate(-360deg);
+        -webkit-transform: rotate(-360deg); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+        -ms-transform: rotate(-360deg); /* IE 9 */
+        -moz-transform: rotate(-360deg);
     }
 }
 
@@ -489,7 +574,7 @@ animation-delay: 250ms;
 //--------------------------------------------------------- About 
 .about-container{
     padding: 100px 15px;
-    background-color: #252525;
+    background-color: #000;
     color: white;
 }
 
@@ -521,6 +606,9 @@ animation-delay: 250ms;
 .skill-blocks-container {
     @media only screen and (min-width: 601px) {
         display: flex;
+        display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+        display: -ms-flexbox;  /* TWEENER - IE 10 */
+        display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
         justify-content: center;
         align-items: center;
     }
@@ -529,6 +617,9 @@ animation-delay: 250ms;
 .skill-block {
     @media only screen and (min-width: 601px) {
         flex: 1;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
     }
     img {
         height: 100px;
@@ -542,7 +633,7 @@ animation-delay: 250ms;
 .portfolio-container {
     padding: 100px 15px;
     text-align: center;
-    background-color: #252525;
+    background-color: #000;
     color: #fff;
  
 }
