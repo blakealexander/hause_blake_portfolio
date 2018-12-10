@@ -4,6 +4,7 @@
 
 body, html {
     overflow-x: hidden;
+    font-family: futura;
 }
 
 
@@ -74,15 +75,18 @@ hr.light.boxBorder{
 	top: 0;
 	width: 100%;
 	height: 100%;
-	background-color: #fff;
+	background-color: rgb(224, 223, 223);
 	z-index: 0;
 	transition: all 350ms ease;
-	opacity: 0;
+	opacity: 0.95;
 	visibility: hidden;
     pointer-events: none;
     z-index: 9;
     max-width: 100%;
 }
+// .reveal-menu{
+//     background-color: #fff;
+// }
 
 .prompt {
 	position: fixed;
@@ -97,10 +101,10 @@ hr.light.boxBorder{
 	display: block;
 	pointer-events: auto;
     visibility: visible;
-    background-color: red;
+    background-color: lightgray;
 }
 
-.reveal{
+.showBackground{
     
     display: block;
     pointer-events: auto;
@@ -197,6 +201,7 @@ hr.light.boxBorder{
 	position: fixed;
 	// left: calc(100% - 292px);
     top: 10px;
+    left: 20px;
 	color: black;
 	display: none;
 	margin: 120px 30px;
@@ -286,47 +291,6 @@ animation-delay: 250ms;
 	color: red;
 }
 
-// .responsive-box {
-// 	background-color: #ddd;
-// 	margin: 2%;
-// 	float: left;
-// }
-
-// .box-1 {
-// 	width: 96%;
-// 	height: 300px;
-// }
-
-// .box-2, .box-3, .box-4 {
-// 	width: 29.333%;
-// 	height: 140px;
-// }
-
-// .box-5 {
-// 	width: 62.666%;
-// 	height: 492px;
-// }
-
-// .header {
-// 	width: 100%;
-// 	height: 120px;
-// }
-
-// .par-1, .par-2, .par-3 {
-// 	width: 70%;
-// 	margin: 1% 2%;
-// 	background-color: #888;
-// 	height: 16px;
-// 	float: left;
-// }
-
-// .par-2 {
-// 	width: 56%;
-// }
-
-// .par-3 {
-// 	width: 64%;
-// }
 
 // ---------------------------------------End of Hamburger Menu
 
@@ -427,75 +391,7 @@ animation-delay: 250ms;
   }
 
 
-//   #ScrollDown {
-//       width: 300px;
-//       position: relative;
-//       top: 600px;
-//       left: 600px;
-//   }
 
-//   @media only screen and (max-width: 600px) {
-//     #ScrollDown{
-//         width: 200px;
-//         position: relative;
-//         top: 500px;
-//         left: 90px;
-//     }
-// }
-
-
-// //   .animate{
-// //     stroke-dasharray: 1000;
-// //     stroke-dashoffset: 1000;
-// //     animation: dash 10s linear forwards;
-// //    }
-
-//    @keyframes dash {
-//    100% {
-//     stroke-dashoffset: 0;
-//     }
-//    }
-// #s_path {
-//     stroke-dasharray: 1000;
-//     stroke-dashoffset: 1000;
-//     animation: dash 3s linear forwards;
-// }
-
-// #cr_path {
-//     stroke-dasharray: 1000;
-//     stroke-dashoffset: 1000;
-//     animation: dash 3s linear forwards 1s;
-//     // animation-delay: 10s;
-// }
-// #ol_path {
-//     stroke-dasharray: 1000;
-//     stroke-dashoffset: 1000;
-//     animation: dash 3s linear forwards 2.2s;
-// }
-
-// #l_path {
-//     stroke-dasharray: 1000;
-//     stroke-dashoffset: 1000;
-//     animation: dash 3s linear forwards 3.7s;
-// }
-
-// #D_path {
-//     stroke-dasharray: 1000;
-//     stroke-dashoffset: 1000;
-//     animation: dash 3s linear forwards 4.5s;
-// }
-
-// #ow_path {
-//     stroke-dasharray: 1000;
-//     stroke-dashoffset: 1000;
-//     animation: dash 3s linear forwards 5.5s;
-// }
-
-// #n_path {
-//     stroke-dasharray: 1000;
-//     stroke-dashoffset: 1000;
-//     animation: dash 3s linear forwards 7.2s;
-// }
 
 .videoreelButton {
     position: fixed;

@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
-  <title>BlakeHauseDesign</title>
+  <title>BlakeHause</title>
 </head>
 
 <body>
@@ -46,9 +46,9 @@
     <div class="reveal-vid" id="videoLightBox" data-reveal>
         <video id="videoReel">
             <!-- Change the name of video to the name of video reel -->
-            <source src="video/StarshipTroopersTrailer2.mp4" type="video/mp4"/> 
-            <source src="video/StarshipTroopersTrailer2.webm" type="video/webm"/>
-            <source src="video/StarshipTroopersTrailer2.ogg" type="video/ogg"/>
+            <source src="video/videoreel.mp4" type="video/mp4"/> 
+            <source src="video/videoreel.webm" type="video/webm"/>
+            <source src="video/videoreel.ogg" type="video/ogg"/>
         </video>
 
         <div class="controls">
@@ -118,62 +118,27 @@
     <div class="work-blocks-container" id="portfolio">
 
       <div v-for="work in portfolioWorks">
+
         <div class="large reveal" :id="'work-'+ work['id']" data-reveal>
-         
-          <h2>{{work['img_name']}}</h2>
-          <hr class="light boxBorder">
-          <p>{{work['img_desc']}}</p>
         
-          <img :src="'images/'+ work['img_path']" :alt="work['img_name']" :data-open="'work-'+ work['id']">
-          <button class="close-button" data-close aria-label="Close modal" type="button">
-            <span aria-hidden="true">&times;</span>
-          </button>
+            <h2>{{work['img_name']}}</h2>
+            <hr class="light boxBorder">
+            <p>{{work['img_desc']}}</p>
+          
+            <img :src="'images/'+ work['img_box']" :alt="work['img_name']">
+            <button class="close-button" data-close aria-label="Close modal" type="button">
+              <span aria-hidden="true">&times;</span>
+            </button>
         </div>
-  
-        <!-- <div class="work1 wow fadeInUp slower" data-wow-delay=".3s" data-wow-duration="1s"
-        data-wow-iteration="1"> -->
+
         <div class="wow fadeInUp slower" data-wow-delay=".3s" data-wow-duration="1s"
         data-wow-iteration="1">
           <div class="work1">
             <img :src="'images/'+ work['img_path']" :alt="work['img_name']" :data-open="'work-'+ work['id']">
           </div>
-          </div>
-        <!-- </div> -->
-      </div>
-  
+        </div>
 
-      <!-- <div class="work1 wow fadeInUp slower" data-wow-delay=".3s" data-wow-duration="1s"
-      data-wow-iteration="1">
-        <img src="images/FuelEnergyDrinks.jpg">
       </div>
-
-      <div class="work2 wow fadeInUp slower" data-wow-delay=".3s" data-wow-duration="1s"
-      data-wow-iteration="1">
-        <img src="images/PiscesInfuser.jpg">
-      </div>
-      <div class="work3 wow fadeInUp slower" data-wow-delay=".3s" data-wow-duration="1s"
-      data-wow-iteration="1">
-        <img src="images/lucasvipers.jpg">
-      </div> -->
-<!-- 
-      <div class="work4">
-        <img src="http://placekitten.com/400/310">
-      </div> -->
-
-      <!-- <div class="work5 wow fadeInUp slower" data-wow-delay=".8s" data-wow-duration="1s"
-      data-wow-iteration="1">
-        <img src="images/thumb-agencyX.jpg">
-      </div>
-
-      <div class="work6 wow fadeInUp slower" data-wow-delay=".2s" data-wow-duration="1s"
-      data-wow-iteration="1">
-        <img src="images/craigmechanical.jpg">
-      </div>
-
-      <div class="work7 wow fadeInUp slower" data-wow-delay=".8s" data-wow-duration="1s"
-      data-wow-iteration="1">
-        <img src="images/thumb-FuelEnergy.jpg">
-      </div> -->
     </div>
   </section>
 
@@ -181,9 +146,8 @@
   <section class="contact-container" id="contact">
     <div class="contact-block">
       <h2>Contact</h2>
-      <h3>Feel free to contact me. :)</h3>
-      <p>I specialize in front end development and design, with my knowledge I create meaningful and engaging
-        experiences.</p>
+      <h3>Feel free to contact me! </h3>
+      <p></p>
     </div>
     <hr class="light">
 
